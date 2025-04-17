@@ -10,9 +10,14 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
     posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
       api_host: "/ingest",
       ui_host: "https://eu.posthog.com",
-      capture_pageview: false, // We capture pageviews manually
-      capture_pageleave: true, // Enable pageleave capture
+      capture_pageview: false,
+      capture_pageleave: true,
       debug: process.env.NODE_ENV === "development",
+      loaded: (ph) => {
+        ph.identify(undefined, {
+          app_name: "qrcode.erkan.dev",
+        });
+      },
     });
   }, []);
 
@@ -36,7 +41,7 @@ function PostHogPageView() {
       if (search) {
         url += "?" + search;
       }
-      posthogClient.capture("$pageview", { "$current_url": url });
+      posthogClient.capture("$pageview", { $current_url: url });
     }
   }, [pathname, searchParams, posthogClient]);
 
