@@ -43,8 +43,8 @@ Free, fast, no watermark. Built for speed and simplicity.
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/your-username/qrcode.erkan.dev.git
-   cd qrcode.erkan.dev
+   git clone https://github.com/erkanercan/erkandev-qrcode.git
+   cd erkandev-qrcode
    ```
 
 2. **Install dependencies**
