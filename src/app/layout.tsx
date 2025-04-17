@@ -7,23 +7,9 @@ import { PostHogProvider } from "@/components/posthog-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "QR Code Generator — Free, Instant, Downloadable",
+  title: "Instant QR Code Generator - qrcode.erkan.dev",
   description:
-    "Generate your own QR code instantly, for free. Customize color, size, and download as PNG or SVG.",
-  openGraph: {
-    title: "QR Code Generator",
-    description: "Generate your own QR code instantly, for free.",
-    type: "website",
-    url: "https://qrcode.yourdomain.com",
-    images: [
-      {
-        url: "/og.png", // generate later
-        width: 1200,
-        height: 630,
-        alt: "QR Code Generator",
-      },
-    ],
-  },
+    "Generate high-quality QR codes instantly. Free, fast, no watermark. Create QR codes for URLs, text, WiFi and more!",
 };
 
 export default function RootLayout({
